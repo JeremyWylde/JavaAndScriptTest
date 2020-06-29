@@ -78,10 +78,10 @@ const Statement: React.FC<invoicesType> = ({customer, performance}) => {
     };
 
     //вариант рефакторинга функции. Но в данной компоненте она не используется
-    let statement = (invoices: invoicesType):string => {
-        let result = `Счет для ${invoices.customer}\n`;
+    let statement = ():string => {
+        let result = `Счет для ${customer}\n`;
 
-        for (let perf of invoices.performance) {
+        for (let perf of performance) {
             result += `   ${perf.playId}: ${priceFormat(priceFor(perf))}`;
             result += ` (${perf.audience} мест)\n`;
         }
