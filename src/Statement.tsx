@@ -77,7 +77,7 @@ const Statement: React.FC<invoicesType> = ({customer, performance}) => {
         return res;
     };
 
-    //вариант рефакторинга функции из задания.
+    //вариант рефакторинга функции. Но в данной компоненте она не используется
     let statement = (invoices: invoicesType):string => {
         let result = `Счет для ${invoices.customer}\n`;
 
